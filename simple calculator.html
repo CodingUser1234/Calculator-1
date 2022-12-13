@@ -1,0 +1,115 @@
+<html>
+        <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+</head>
+<style>
+body
+{
+    background-color: rgb(222, 173, 168);
+}
+#container 
+{
+    width: 280px;
+    height: 350px;
+    background-color: white;
+    margin: 0px auto;  /* move to center  */
+    border-top: 40px groove #4D4C7D;
+    border-bottom: 40px groove #4D4C7D ;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px black;
+
+}
+#h
+{
+    width: 95%;
+    height: 30px;
+    margin: 6px;
+    font-size: 20px;
+}
+input[type=button]
+{
+    width: 60px;
+    height: 30px;
+    margin: 2px;
+    font-size: 25px;
+}
+#head
+{
+    color: #E9D5DA;
+    font-family: Comic Sans MS;
+    font-size:50px;
+    
+}
+.foot
+{
+    text-align: center;
+    font-family: Calibri;
+    color:rgb(230, 27, 71);
+}
+form{padding:2px;}
+</style>
+
+<body>
+    
+    <h2 id="head" style="text-align: center;"><strong>Calculator</strong></h2>
+    
+     <br>
+<div id="container">
+<form name="form">
+    <br>
+<input type="text" name="result" id="h">
+<br><br>
+<input type="button" value="1" onclick="document.form.result.value+=1">
+<input type="button" value="2" onclick="document.form.result.value+=2">
+<input type="button" value="3" onclick="document.form.result.value+=3">
+<input type="button" value="+" onclick="document.form.result.value+= '+' ">
+          <br><br>
+<input type="button" value="4" onclick="document.form.result.value+=4">
+<input type="button" value="5" onclick="document.form.result.value+=5">
+<input type="button" value="6"onclick="document.form.result.value+=6">
+<input type="button" value="-" onclick="document.form.result.value+='-'">
+           <br><br>
+<input type="button" value="7" onclick="document.form.result.value+=7">
+<input type="button" value="8" onclick="document.form.result.value+=8">
+<input type="button" value="9" onclick="document.form.result.value+=9">
+<input type="button" value="x" onclick="document.form.result.value+='*'">
+            <br><br>
+ <input type="button" value="." onclick="document.form.result.value+= '.' ">
+<input type="button" value="0" onclick="document.form.result.value+=0">
+<input type="button" value="%" onclick="document.form.result.value+='%'">
+<input type="button" value="/" onclick="document.form.result.value+='/'">      
+            <br><br>      
+<input style="width: 35%;height:40px" type="button" value="=" onclick="document.form.result.value = eval(document.form.result.value)">
+
+<input style="width: 28%;height:40px" type="button" value="c" onclick="document.form.result.value = ' ' ">   
+ 
+<input style="width: 28%;height:40px" type="button" value="del" onclick= "del()">
+<br><br>
+</form>
+</div>
+<br>
+
+</body>
+
+</html></body>
+        <style></style>
+        <script>function del()
+{
+    var prevalue=document.form.result.value;
+    document.form.result.value=prevalue.substr(0,prevalue.length-1);
+}
+
+function evaluate()
+{
+    var eval= document.form.result.value;
+    document.form.result.value = eval(document.form.result.value);
+}
+
+</script>
+      </html>
